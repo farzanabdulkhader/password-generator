@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title>My Random PW generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="flex">
+        <div class="container">
+            <h1>Generate a <br><span class="h1-green-text">random password</span></h1>
+            <p class="gray-text">Never use an insecure password again.</p>
+    
+            <label for="pw-length" class="pw-length-label">Length: <span class="pw-length-value" id="slider-number-el">8</span></label>
+            <input type="range" id="slider" min="8" max="12" value="8">
+    
+            <button onclick="getPassword()"><i class="fa fa-bolt"></i>Generate passwords</button>
+            
+            <hr class="ruler">
+            <div class="pw-display-container">
+                <div id="password1-el"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                <div id="password2-el"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                <div id="password3-el"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                <div id="password4-el"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+            </div>
+            </div>
+    </main>
+    
+
+        <footer>
+            <p>Project by <a href="https://scrimba.com/learn/learnjavascript/" target="_blank">Scrimba</a>.</p>
+            <p>Coded by <a href="https://github.com/farzanabdulkhader" target="_blank">Farzana Abdul Khader</a>.</p>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

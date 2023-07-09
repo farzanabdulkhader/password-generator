@@ -1,0 +1,199 @@
+/* --------fonts-------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap");
+
+
+/* --------custom prperties-------- */
+:root {
+    --dark-blue: #1f2937;
+    --light-blue: #273549;
+    --btn-green: #10b981;
+    --txt-green: #55f991;
+    --med-gray: #d5d4d8;
+    --footer: hsl(228, 45%, 44%);
+    --background: #1c1c1c;
+
+    --ff-main: 'Karla', sans-serif;
+    --ff-serif: 'Inter', sans-serif;
+}
+
+
+/* ---------reset--------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background);
+    font-family: var(--ff-serif);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center
+
+}
+
+.container {
+    width: min(90%, 33rem);
+    background-color: var(--dark-blue);
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07),
+                0 4px 8px rgba(0,0,0,0.07),
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07),
+                0 32px 64px rgba(0,0,0,0.07); 
+}
+
+
+/* ---------Head section */
+h1 {
+    color: white;
+    font-family: var(--ff-main);
+    margin-top: 0.25em;
+}
+
+.h1-green-text {
+    color: var(--txt-green)
+}
+
+.gray-text {
+    color: var(--med-gray);
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 1em;
+}
+
+
+/* -------------Slider---------------- */
+.pw-length-label {
+    color: var(--med-gray);
+    margin-top: 1em;
+    font-size: 0.95em;
+}
+
+.pw-length-value {
+    color: var(--txt-green);
+    font-family: var(--ff-main);
+}
+
+#slider {
+    display: block;
+    margin-top: 0.6em;
+}
+
+button {
+    color: white;
+    background-color: var(--btn-green);
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    width: 200px;
+    font-family: var(--ff-serif);
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07),
+                0 4px 8px rgba(0,0,0,0.07),
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07),
+                0 32px 64px rgba(0,0,0,0.07);
+    transition: all 0.25s
+}
+
+.fa-bolt {
+    margin-right: 8px;
+}
+
+button:hover,
+button:focus {
+    background-color: white;
+    color: var(--btn-green);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09),
+                0 4px 2px rgba(0,0,0,0.09),
+                0 8px 4px rgba(0,0,0,0.09),
+                0 16px 8px rgba(0,0,0,0.09),
+                0 32px 16px rgba(0,0,0,0.09),
+                0 64px 32px rgba(0,0,0,0.07);
+}
+
+hr {
+    background-color: var(--light-blue);
+    height: 2px;
+    border: 1px solid var(--light-blue);
+    margin-top: 2em;
+}
+
+
+/* --------Down section-------- */
+.pw-display-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    
+}
+    
+.pw-display-container > div {
+    background-color: var(--light-blue);
+    text-align: center;
+    border-radius: 4px;
+    width: 100%px;
+    padding: 0.5em 1em;
+}
+
+.fa-ellipsis-h {
+    color: var(--dark-blue);
+}
+
+input[type="text"] {
+    /* color: var(--txt-green); */
+    background-color: var(--light-blue);
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 15ch;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+/* -------------Footer-------------- */
+footer {
+    text-align: center;
+    padding: 2em;
+}
+
+footer > p {
+    color: white;
+    font-family: var(--ff-serif);
+    font-size: 0.7em;
+}
+
+footer > p > a {
+    color: var(--footer);
+    text-decoration: none;
+}
+
+
+/* -------------Media queries---------- */
+@media screen and (min-width: 600px){
+    .container {
+        padding: 4em;
+    }
+    .pw-display-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+}
